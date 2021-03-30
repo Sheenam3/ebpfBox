@@ -1,0 +1,38 @@
+./funccount -i 1 /usimex:*
+
+FUNC                                    COUNT
+getNum                                  89691
+
+FUNC                                    COUNT
+getNum                                  87883
+
+FUNC                                    COUNT
+getNum                                  92758
+
+FUNC                                    COUNT
+getNum                                  90672
+
+FUNC                                    COUNT
+getNum                                  87491
+
+Output shows number of times getNum being called in a second.
+
+
+#10 threads with sleep(1) in the program, shows the following output:
+root@bpftrace:/usr/share/bcc/tools# ./funccount -i 1 /usimex:*
+Tracing 12 functions for "/usimex:*"... Hit Ctrl-C to end.
+
+FUNC                                    COUNT
+getNum                                     10
+
+FUNC                                    COUNT
+getNum                                     10
+
+FUNC                                    COUNT
+getNum                                     10
+
+FUNC                                    COUNT
+getNum                                     10
+
+FUNC                                    COUNT
+getNum                                     10
